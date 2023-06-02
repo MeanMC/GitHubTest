@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+  <h2>Vertical (basic) form</h2>
+  <form action="/action_page.php">
+    <div class="form-group">
+      <label for="username">User</label>
+      <input type="text" class="form-control" id="username" name="username">
+    </div>
+
+    <div class="form-group">                  
+      <input class="week-picker" placeholder="Week Picker"></input>    
+      <label>Week :</label> <span id="startDate"></span> - <span id="endDate"></span>
+    </div> 
+
+    <select class='DropDownList1 form-control' name='days' >
+      <option select='selected' value='N/A'>Select Day</option>
+      <option value='Monday' id='Monday' name='Monday'>Monday</option>
+      <option value='Tuesday' id='Tuesday' name='Tuesday'>Tuesday</option>
+       <option value='Wednesday' id='Wednesday' name='Wednesday'>Wednesday</option>
+      <option value='Thursday' id='Thursday' name='Thursday'>Thursday</option>
+      <option value='Friday' id='Friday' name='Friday'>Friday</option>      
+    </select>
+
+    <div class="monday">
+      <div class="form-group">
+        <label for="monmorning">Monday Morning:</label>
+        <textarea class="form-control comments" cols="5" rows="4" name="monmorning"></textarea>
+      </div>
+      
+      <div class="form-group">
+        <label for="monafternoon">Monday Afternoon:</label>
+        <textarea class="form-control comments" cols="5" rows="4" name="monafternoon"></textarea>
+      </div>
+    </div>
+
+    <div class="tuesday">
+      <div class="form-group">
+        <label for="tuemorning">Tuesday Morning:</label>
+        <textarea class="form-control comments" cols="5" rows="4" name="tuemorning"></textarea>
+      </div>
+
+      <div class="form-group">
+        <label for="tueafternoon">Tuesday Afternoon:</label>
+        <textarea class="form-control comments" cols="5" rows="4" name="tueafternoon"></textarea>
+      </div>
+    </div>
+
+    <div class="wednesday">
+      <div class="form-group">
+        <label for="wedmorning">Wednesday Morning:</label>
+        <textarea class="form-control comments" cols="5" rows="4" name="wedmorning"></textarea>
+      </div>
+
+      <div class="form-group">
+        <label for="wedafternoon">Wednesday Afternoon:</label>
+        <textarea class="form-control comments" cols="5" rows="4" name="wedafternoon"></textarea>
+      </div>
+    </div>
+
+    <div class="thursday">
+      <div class="form-group">
+        <label for="thursmorning">Thursday Morning:</label>
+        <textarea class="form-control comments" cols="5" rows="4" name="thursmorning"></textarea>
+      </div>
+
+      <div class="form-group">
+        <label for="thursafternoon">Thursday Afternoon:</label>
+        <textarea class="form-control comments" cols="5" rows="4" name="thursafternoon"></textarea>
+      </div>
+    </div>
+
+    <div class="friday">
+      <div class="form-group">
+        <label for="frimorning">Friday Morning:</label>
+        <textarea class="form-control comments" cols="5" rows="4" name="frimorning"></textarea>
+      </div>
+
+      <div class="form-group">
+        <label for="friafternoon">Friday Afternoon:</label>
+        <textarea class="form-control comments" cols="5" rows="4" name="friafternoon"></textarea>
+      </div>
+    </div>
+
+
+    <div class="form-group">
+      <label for="comments">Comments:</label>
+      <textarea class="form-control comments" cols="5" rows="4" name="comments"></textarea>
+    </div>
+    <button type="submit" class="btn btn-default">Submit</button>
+  </form>
+</div>
+
+<script>
+   $(document).ready(function (e) {
+    $('.DropDownList1').change(function () {
+        if ($(this).val() == 'Monday') {
+            $('.monday').show();
+        } else {
+            $('.monday').hide();
+        }
+        if ($(this).val() == 'Tuesday') {
+            $('.tuesday').show();
+        } else {
+            $('.tuesday').hide();
+        }
+        if ($(this).val() == 'Wednesday') {
+            $('.wednesday').show();
+        } else {
+            $('.wednesday').hide();
+        }
+        if ($(this).val() == 'Thursday') {
+            $('.thursday').show();
+        } else {
+            $('.thursday').hide();
+        }
+        if ($(this).val() == 'Friday') {
+            $('.friday').show();
+        } else {
+            $('.friday').hide();
+        }       
+    });
+});
+</script>
+
+
+
+<style>
+    .monday,
+    .tuesday,
+    .wednesday,
+    .thursday,
+    .friday    
+     {
+        display: none;
+    }
+</style>
+
+</body>
+</html>
